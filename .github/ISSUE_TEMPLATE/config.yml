@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ideas and questions
+    url: https://github.com/347956/LCDrone-issues/discussions
+    about: Suggestions, questions and "does it work with mod X?" go in Discussions.
+  - name: Gameplay wiki
+    url: https://thunderstore.io/c/lethal-company/p/347956/LCDrone/wiki/6829-00-lcdrone-wiki/
+    about: How the drones, commands, upgrades and modules work.

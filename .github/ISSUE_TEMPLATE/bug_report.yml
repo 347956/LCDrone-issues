@@ -1,0 +1,64 @@
+name: Bug report
+description: Something in LCDrone doesn't work as it should.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! Please check the open issues first, in case someone has already reported this.
+  - type: input
+    id: version
+    attributes:
+      label: LCDrone version
+      description: Shown in r2modman, or in your log as `Loading [LCDrone x.y.z]`.
+      placeholder: "0.9.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: role
+    attributes:
+      label: Were you the host or a client?
+      options:
+        - Host
+        - Client
+        - Singleplayer
+        - Don't know
+    validations:
+      required: true
+  - type: input
+    id: moon
+    attributes:
+      label: Moon and interior
+      description: The interior if you know it (Facility, Mansion, Mineshaft or a modded one).
+      placeholder: "Experimentation, Facility"
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead.
+      placeholder: |
+        1. Sent drone 1 to room 5 with `go r5`
+        2. ...
+        Expected: ...
+        What happened: ...
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Log file
+      description: |
+        Drag `BepInEx/LogOutput.log` from your profile folder in here (r2modman: Settings > Browse profile folder).
+        Please send the log from the session where the bug happened, because the game overwrites it on every launch.
+    validations:
+      required: true
+  - type: textarea
+    id: mods
+    attributes:
+      label: Other mods
+      description: Your mod list or the r2modman profile code. Leave it empty if you only run LCDrone and its dependencies.
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Screenshots, a video, how often it happens.
